@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        width: 15rem;
+    }
+    .opt{
+        margin-top: 20px;
+        display: flex;
+        gap:10px;
+
+        button{
+            padding: 8px;
+            border-radius: 15px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+        button:hover{
+            background-color: aqua;
+            color: black;
+        }
+     
+    }
+} 
+
+/* SENHA DOS FUNCIONARIOS DA EMPRESA */
+
+.gerente-login{
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    transition: all 0.7s;
+    gap: 10px;
+
+    input{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    button{
+        padding: 5px;
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.adm-login{
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    transition: all 0.7s;
+    gap: 10px;
+
+    input{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    button{
+        padding: 5px;
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.func-login{
+    background-color: aqua;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+    transition: all 0.7s;
+    gap: 10px;
+
+    input{
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    button{
+        padding: 5px;
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+}
+

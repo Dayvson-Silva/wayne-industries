@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-straight/css/uicons-bold-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link rel="stylesheet" href="gestao.css" />
+    <script src="gestao.js" defer></script>
+    <title>Gestão de Recursos</title>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fi fi-rr-chart-histogram"></i>Gestão de Recursos</h1>
+      <div class="adm">
+        <p>adim: Dayvson Silva</p>
+        <button class="btn-sair"><i class="fi fi-rr-leave"></i>Sair</button>
+      </div>
+    </header>
+
+    <section class="container escolhas">
+      <div class="escolha">
+        <a href="#" class="item ativo"
+          ><i class="fi fi-bs-tools"></i>Equipamentos</a
+        >
+        <a href="#" class="item"><i class="fi fi-bs-car"></i>Veículos</a>
+        <a href="#" class="item"
+          ><i class="fi fi-bs-shield-check"></i>Dispositivo de Segurança</a
+        >
+      </div>
+    </section>
+    <section class="container adicionar">
+      <div class="add">
+        <button class="btn-add">
+          <i class="fi fi-rr-plus-small"></i>Adicionar Recursos
+        </button>
+        <input type="text" placeholder="Buscar Recursos..." />
+        <select name="status" id="status">
+          <option value="1">Todos os Status</option>
+          <option value="2">Disponivel</option>
+          <option value="3">Em Uso</option>
+          <option value="4">Manutenção</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="container tabela">
+      <div class="tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Status</th>
+              <th>Localização</th>
+              <th>Última Atualização</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EQ001</td>
+              <td>Notebook Dell Inspiron</td>
+              <td>Equipamento</td>
+              <td class="disponivel">Disponível</td>
+              <td>Almoxarifado - Setor A</td>
+              <td>14/01/2024</td>
+              <td>
+                <i class="fi fi-rr-edit" id="editar"></i>
+                <i class="fi fi-rr-trash" id="excluir"></i>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>EQ002</td>
+              <td>Impressora HP LaserJet</td>
+              <td>Equipamento</td>
+              <td class="manu">Manutenção</td>
+              <td>Setor Administrativo</td>
+              <td>11/01/2024</td>
+              <td>
+                <i class="fi fi-rr-edit" id="editar"></i>
+                <i class="fi fi-rr-trash" id="excluir"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="container vitrine">
+      <div class="vitrine">
+        <div class="card">
+          <i class="fi fi-rr-progress-complete"></i>
+          <div>
+
+            <h2>Disponivel</h2>
+            <p>2</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fi fi-rr-play"></i>
+          <div>
+            <h2>Em Uso</h2>
+            <p>5</p>
+          </div>
+        </div>
+        <div class="card">
+          <i class="fi fi-rr-tools"></i>
+          <div>
+            <h2>Manutenção</h2>
+            <p>3</p>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+  </body>
+  </html>

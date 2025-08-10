@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "inter", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .superior{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 60px;
+    margin: 10px 10px;
+    background-color: rgb(25, 29, 29);
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    h1  {
+        color: white;
+        font-size: 20px;
+        
+    }
+    h3{
+        color: white;
+        font-size: 15px;
+    }
+
+}
+section .logo-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-right:800px;
+}
+
+.hora-data{
+    color: white;
+    position: absolute;
+    margin-left: 1000px;
+}
+
+
+aside.menu{
+    overflow: hidden;
+    width: 300px;
+    height: 500px;
+    margin: 5px 10px;
+    background-color: rgb(25, 29, 29);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+
+     
+        a{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            gap: 15px;
+            font-size: 20px;
+                
+        }
+        a.ativo{
+            background-color: rgba(0 0 0 / 0.5);
+        }
+
+        a:hover{
+            background-color: rgba(0 0 0 / 0.8);
+        }
+        
+    }
+}
+
+section.telas{
+    background-color: rgb(25, 29, 29);
+    width: 980px;
+    height: 500px;
+    margin: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+section.telas div {
+    background-color: rgba(0 0 0 / 0.5);
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.card-painel {
+    width: 450px;
+    height: 220px;
+}
+
+.principal-tela {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 25px; 
+    justify-items: center; 
+}
+
+.tela1 , .tela2, .tela3, .tela4 {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+    h3{
+        font-size: 16px;
+    }
+    h1.azul{
+        color: blue;
+        font-size: 35px;
+    }
+
+    h1.verde{
+        color: green;
+        font-size: 35px;
+    }
+    h1.amarelo{
+        color: yellow;
+        font-size: 35px;
+    }
+    h1.vermelho{
+        color: red;
+        font-size: 35px;
+    }
+
+    .seguranca{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        
+    }
+ 
+    i{
+        font-size: 30px;
+         margin-top: 5px;
+    }
+
+    
+
+}
+
+
+/* 1. Reseta a aparência padrão da barra de progresso */
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none; /* Remove qualquer borda padrão */
+  border-radius: 10px; /* Arredonda os cantos da barra inteira */
+  overflow: hidden; /* Garante que o preenchimento fique dentro das bordas arredondadas */
+  height: 16px; /* Aumenta um pouco a altura para ficar mais visível */
+  width: 90%;
+  margin: 10px 0;
+}
+
+/* 2. Estiliza a barra para navegadores WebKit (Chrome, Safari, Edge) */
+
+/* A trilha (o fundo) da barra */
+progress::-webkit-progress-bar {
+  background-color: #333; 
+  border-radius: 10px;
+}
+
+/* O valor (a parte preenchida) da barra */
+progress::-webkit-progress-value {
+  background-color: #00bcd4; 
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out; /
+}
+
+/* painel de demonstração */
+
+#style-seguranca {
+    width: 95%;
+    height: 450px;
+    h2{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        font-size: 25px;
+    }
+
+    .info-seguranca{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+        cursor: pointer;
+        background-color: rgba(0 0 0 / 0.1);
+        
+        
+        p{
+            background-color: rgba(8, 235, 0, 0.2);
+            padding: 15px 25px;
+            width: 80%;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            margin-left: 100px;
+            font-size: 20px;
+            
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            
+            span{
+                font-weight: bold;
+                background-color: green;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+
+            span.yellow{
+                background-color: yellow;
+                color: black;
+            }
+        }
+    }
+}
+
+#style-recursos{
+    
+    width: 95%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    h2{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        font-size: 25px;
+    }
+    .info-recursos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 700px;
+        background-color: rgba(0 0 0 / 0.1);
+        
+        
+        p{
+            
+            width: 80%;
+            color: white;
+            
+            display: flex;
+            align-items: center; 
+            justify-content: space-between;
+            font-size: 20px;
+            
+            span.blue{
+                font-weight: bold;
+                color: rgb(11, 8, 230);
+            }
+            
+            span.violet{
+                font-weight: bold;
+                color: rgb(178, 8, 230);
+            }
+            span.yellow{
+                font-weight: bold;
+                color: rgb(231, 216, 2);
+            }
+            
+            span.green{
+                font-weight: bold;
+                color: rgb(8, 230, 8);
+            }
+            
+        }
+        /* mudar a cor de dentro da barra */
+        .progress-recursos::-webkit-progress-value {
+            background-color: rgb(11, 8, 230);
+        }
+        
+        .progress-memoria::-webkit-progress-value {
+            background-color: rgb(178, 8, 230);
+        }
+        
+        
+        .progress-armazenamento::-webkit-progress-value {
+            background-color: #ffeb3b;
+        }
+        .progress-redes::-webkit-progress-value {
+            background-color: rgb(8, 230, 8); 
+        }
+        
+        
+    }
+}
+
+#style-atividades{
+    
+    width: 95%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        font-size: 25px;
+    }
+    
+    .info-atividades{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 700px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.1);
+        overflow-y: scroll;
+
+        .info{
+            padding: 25px;
+            background-color: rgba(19, 0, 185, 0.1);
+
+            p{
+                font-size: 20px;
+            }
+
+            span{
+                font-weight: 100;
+                font-family: "italic", sans-serif;
+                font-size: 15px;
+                color: thistle;
+            }
+        }
+    }
+}
