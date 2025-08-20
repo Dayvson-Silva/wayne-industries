@@ -23,108 +23,65 @@
     <header>
       <h1><i class="fi fi-rr-chart-histogram"></i>Gestão de Recursos</h1>
       <div class="adm">
-        <p>adim: Dayvson Silva</p>
+        <p id="cargo"></p>
         <button class="btn-sair"><i class="fi fi-rr-leave"></i>Sair</button>
       </div>
     </header>
 
     <section class="container escolhas">
       <div class="escolha">
-        <a href="#" class="item ativo"
+        <a href="#" class="item ativo" data-tipo="Todos"
+          ><i class="fi fi-sr-apps"></i>Todos</a
+        >
+        <a href="#" class="item" data-tipo="Equipamento"
           ><i class="fi fi-bs-tools"></i>Equipamentos</a
         >
-        <a href="#" class="item"><i class="fi fi-bs-car"></i>Veículos</a>
-        <a href="#" class="item"
+        <a href="#" class="item" data-tipo="Veículo"
+          ><i class="fi fi-bs-car"></i>Veículos</a
+        >
+        <a href="#" class="item" data-tipo="Dispositivo"
           ><i class="fi fi-bs-shield-check"></i>Dispositivo de Segurança</a
         >
       </div>
     </section>
+    
     <section class="container adicionar">
-      <div class="add">
-        <button class="btn-add">
-          <i class="fi fi-rr-plus-small"></i>Adicionar Recursos
-        </button>
-        <input type="text" placeholder="Buscar Recursos..." />
-        <select name="status" id="status">
-          <option value="1">Todos os Status</option>
-          <option value="2">Disponivel</option>
-          <option value="3">Em Uso</option>
-          <option value="4">Manutenção</option>
-        </select>
+      <div class="container-formulario-recurso">
+        <h2>Adicionar/Editar Recurso</h2>
+        <form id="formulario-recurso">
+          <input type="hidden" id="recurso-id" />
+          <input
+            type="text"
+            id="recurso-nome"
+            placeholder="Nome do Equipamento"
+            required
+          />
+          <select id="recurso-tipo" required>
+            <option value="" disabled selected>Selecione o Tipo</option>
+            <option value="Veículo">Veículo</option>
+            <option value="Equipamento">Equipamento</option>
+            <option value="Dispositivo">Dispositivo de Segurança</option>
+          </select>
+          <button type="submit">Salvar Recurso</button>
+        </form>
+        <p id="total-recursos"></p>
       </div>
     </section>
 
     <section class="container tabela">
       <div class="tabela">
-        <table>
+        <table id="tabela-recursos">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Nome</th>
-              <th>Categoria</th>
-              <th>Status</th>
-              <th>Localização</th>
-              <th>Última Atualização</th>
+              <th>Tipo</th>
               <th>Ações</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>EQ001</td>
-              <td>Notebook Dell Inspiron</td>
-              <td>Equipamento</td>
-              <td class="disponivel">Disponível</td>
-              <td>Almoxarifado - Setor A</td>
-              <td>14/01/2024</td>
-              <td>
-                <i class="fi fi-rr-edit" id="editar"></i>
-                <i class="fi fi-rr-trash" id="excluir"></i>
-              </td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td>EQ002</td>
-              <td>Impressora HP LaserJet</td>
-              <td>Equipamento</td>
-              <td class="manu">Manutenção</td>
-              <td>Setor Administrativo</td>
-              <td>11/01/2024</td>
-              <td>
-                <i class="fi fi-rr-edit" id="editar"></i>
-                <i class="fi fi-rr-trash" id="excluir"></i>
-              </td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </section>
-    <section class="container vitrine">
-      <div class="vitrine">
-        <div class="card">
-          <i class="fi fi-rr-progress-complete"></i>
-          <div>
-
-            <h2>Disponivel</h2>
-            <p>2</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fi fi-rr-play"></i>
-          <div>
-            <h2>Em Uso</h2>
-            <p>5</p>
-          </div>
-        </div>
-        <div class="card">
-          <i class="fi fi-rr-tools"></i>
-          <div>
-            <h2>Manutenção</h2>
-            <p>3</p>
-          </div>
-        </div>
-       
-      </div>
-    </section>
+    
   </body>
-  </html>
+</html>

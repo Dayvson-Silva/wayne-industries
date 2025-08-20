@@ -3,6 +3,15 @@ const telaPrincipal = document.querySelector(".tela-principal");
 const todosOsItens = document.querySelectorAll(".item-menu");
 const telasContainer = document.querySelector(".telas");
 const telaDashboardInicial = document.querySelector(".principal-tela");
+const btnSairPainel = document.querySelector(".btn-sair-painel");
+
+
+const nomeUsuario = localStorage.getItem("nome");
+const gerente = document.getElementById("gerente").innerHTML = `Gerente:${nomeUsuario}`
+
+btnSairPainel.addEventListener("click", () => {
+  history.back();
+});
 
 // variaveis para as telas
 const seguranca = document.getElementById("seguranca");
@@ -29,11 +38,9 @@ function handleMenuClick(e) {
       // Pega o ID do item clicado (ex: "seguranca")
       const clickedId = e.currentTarget.id;
 
-      // Limpa o conteúdo atual da tela principal
       telasContainer.innerHTML = "";
 
       if (clickedId === "dashboard") {
-        // Se clicou em dashboard, colocamos o HTML da tela inicial de volta
         //   .outerHTML para pegar o elemento <article> inteiro
         telasContainer.innerHTML = telaDashboardInicial.outerHTML;
       } else if (clickedId === "seguranca") {
