@@ -8,6 +8,27 @@
     font-family: "inter", sans-serif;
     
 }
+:root {
+  --batman-black: #000000;
+  --batman-dark-grey: #333333;
+  --batman-medium-grey: #666666;
+  --batman-yellow: #ffc857;
+  --batman-dark-blue: #2c3e50;
+  --batman-accent-grey: #bdbdbd;
+  --batman-white: #ffffff;
+  --fundo-profundo: #11111b; 
+  --fundo-superficie: #1b1b27; 
+  --borda-sutil: #31313f; 
+
+  --texto-principal: #e2e2e8; 
+  --texto-secundario: #878793; 
+
+  --primaria-interacao: #6952de;
+  --primaria-hover: #7f6ae3; 
+
+  --destaque-sucesso: #27c794; 
+ 
+}
 
 body{
     background: url(./image/pngtree-black-gold-background-with-european-patterns-image_310577.jpg) ;
@@ -33,7 +54,7 @@ section{
     flex-direction: column;
 
     h1,h2{
-        color: rgb(85, 83, 83);
+        color: var(--texto-secundario);
     }
 
     img{
@@ -47,11 +68,13 @@ section{
         button{
             padding: 8px;
             border-radius: 15px;
-            border: none;
             font-size: 15px;
             cursor: pointer;
             transition: all 0.5s ease;
-            background-color: rgb(85, 83, 83);
+            color: var(--texto-secundario);
+            background-color: rgba(0, 0, 0, 0.20);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
         }
         button:hover{
             background-color: rgb(160, 152, 78);
@@ -64,7 +87,8 @@ section{
 /* SENHA DOS FUNCIONARIOS DA EMPRESA */
 
 .gerente-login{
-    background-color: rgb(33, 34, 34);
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 300px;
     height: 200px;
     border-radius: 10px;
@@ -75,33 +99,41 @@ section{
     margin-top: 15px;
     gap: 10px;
 
+    h3{
+        color:var(--texto-secundario);
+    }
     input{
         display: flex;
         justify-content: center;
         padding: 10px;
         margin-bottom: 5px;
         border-radius: 5px;
-        border: none;
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         
     }
 
     button{
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         padding: 5px;
         width: 100%;
         margin-top: 5px;
         border-radius: 5px;
-        border: none;
+        color: var(--batman-medium-grey);
         cursor: pointer;
         transition: all 0.5s ease;
 
     }
     .enviar:hover{
         background-color: rgb(172, 140, 0);
+        color: black;
     }
 }
 
 .adm-login{
-    background-color:  rgb(33, 34, 34);
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 300px;
     height: 200px;
     border-radius: 10px;
@@ -112,33 +144,41 @@ section{
     margin-top: 15px;
     gap: 10px;
 
+    h3{
+        color:var(--texto-secundario);
+    }
     input{
         display: flex;
         justify-content: center;
         padding: 10px;
         margin-bottom: 5px;
         border-radius: 5px;
-        border: none;
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         
     }
 
     button{
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         padding: 5px;
         width: 100%;
         margin-top: 5px;
         border-radius: 5px;
-        border: none;
+        color: var(--batman-medium-grey);
         cursor: pointer;
         transition: all 0.5s ease;
     }
      .enviar:hover{
         background-color: rgb(172, 140, 0);
+        color: black;
     }
  
 }
 
 .func-login{
-    background-color: rgb(33, 34, 34);
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 300px;
     height: 200px;
     border-radius: 10px;
@@ -149,26 +189,33 @@ section{
     margin-top: 15px;
     gap: 10px;
 
+    h3{
+        color:var(--texto-secundario);
+    }
     input{
         display: flex;
         justify-content: center;
         padding: 10px;
         margin-bottom: 5px;
         border-radius: 5px;
-        border: none;
-        
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
     }
     button{
+        background-color: rgba(0, 0, 0, 0.80);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         padding: 5px;
         width: 100%;
         margin-top: 5px;
         border-radius: 5px;
-        border: none;
         cursor: pointer;
         transition: all 0.5s ease;
+        color: var(--batman-medium-grey);
     }
      .enviar:hover{
         background-color: rgb(172, 140, 0);
+        color: black;
     }
 }
 

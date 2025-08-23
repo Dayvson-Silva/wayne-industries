@@ -12,7 +12,7 @@ let filtroAtual = "Todos";
 
 const nomeUsuario = localStorage.getItem("nome");
 
-const adm = document.getElementById("cargo").innerHTML = `adm: ${nomeUsuario}`
+const adm = document.getElementById("cargo").innerHTML = `ADM: ${nomeUsuario}`
 const totalRecursos = document.getElementById("total-recursos");
 const formularioRecurso = document.getElementById("formulario-recurso");
 const corpoTabelaRecursos = document.querySelector("#tabela-recursos tbody");

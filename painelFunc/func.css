@@ -1,0 +1,198 @@
+:root {
+    --batman-black: #000000;
+    --batman-dark-grey: #333333;
+    --batman-medium-grey: #666666;
+    --batman-yellow: #ffc857;
+    --batman-dark-blue: #2c3e50;
+    --batman-accent-grey: #bdbdbd;
+    --batman-white: #ffffff;
+    --fundo-profundo: #11111b;
+    --fundo-superficie: #1b1b27;
+    --borda-sutil: #31313f;
+    --texto-principal: #e2e2e8;
+    --texto-secundario: #878793;
+    --primaria-interacao: #6952de;
+    --primaria-hover: #7f6ae3;
+    --destaque-sucesso: #27c794;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--fundo-profundo);
+    color: var(--texto-principal);
+    /* Garante centralização vertical e horizontal sem overflow */
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.painel-funcionario {
+    width: 100%;
+    max-width: 650px;
+    background: var(--fundo-superficie);
+    border: 2px solid var(--borda-sutil);
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 200, 87, 0.1);
+    animation: surgir 0.8s ease-out forwards;
+}
+
+.painel-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--batman-black);
+    border-bottom: 3px solid var(--batman-yellow);
+    border-radius: 8px 8px 0 0;
+}
+
+.titulo-empresa {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: var(--batman-accent-grey);
+    letter-spacing: 3px;
+}
+
+img {
+    width: 90px;
+    margin-left: 20px;
+}
+
+.painel-corpo {
+    padding: 30px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Ajuda em telas muito pequenas */
+}
+
+.foto-funcionario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--borda-sutil);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+    margin: 0 auto; /* Centraliza a foto se quebrar a linha */
+}
+
+.identificacao {
+    flex-grow: 1;
+    text-align: center; /* Centraliza o texto quando a linha quebra */
+}
+
+.nome-funcionario {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: var(--texto-principal);
+}
+
+.cargo-funcionario {
+    font-size: 1.2em;
+    color: var(--batman-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detalhes-acesso, .status-operacional {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda-sutil);
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--texto-secundario);
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.nivel-acesso {
+    background-color: rgba(39, 199, 148, 0.1);
+    border: 1px solid var(--destaque-sucesso);
+    color: var(--destaque-sucesso);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    /* Centraliza o container do nível de acesso */
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.luz-status {
+    width: 10px;
+    height: 10px;
+    background-color: var(--destaque-sucesso);
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px var(--destaque-sucesso);
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.status-item {
+    background: var(--fundo-profundo);
+    border: 1px solid var(--borda-sutil);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.status-item span {
+    font-size: 0.9em;
+    color: var(--texto-secundario);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.status-item strong {
+    font-size: 1.1em;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.status-ok {
+    color: var(--destaque-sucesso);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para telas menores */
+@media (min-width: 500px) {
+    .identificacao {
+        text-align: left;
+    }
+    .perfil {
+        flex-wrap: nowrap;
+    }
+}

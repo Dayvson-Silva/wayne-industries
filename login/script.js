@@ -62,7 +62,7 @@ btnAdm.addEventListener("click", () => {
     const form = document.querySelector(".adm-form"); 
     const senhaInput = document.querySelector(".senha");
     const nomeInput = document.querySelector(".nome");
-
+    
     form.addEventListener("submit", (e) => {
         e.preventDefault(); 
 
@@ -87,7 +87,7 @@ btnFunc.addEventListener("click", () => {
             </form>
         </div>
     `;
-
+    const nomeInput = document.querySelector(".nome");
     const form = document.querySelector(".func-form"); 
     const senhaInput = document.querySelector(".senha");
 
@@ -96,7 +96,8 @@ btnFunc.addEventListener("click", () => {
         e.preventDefault(); 
 
         if (senhaInput.value == 5050) {
-            window.location.href = "/painelGerente/painel.html";
+            localStorage.setItem("nome", nomeInput.value)
+            window.location.href = "/painelFunc/func.html";
         } else {
             alert("Senha inválida");
         }
