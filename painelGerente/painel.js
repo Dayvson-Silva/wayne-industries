@@ -23,26 +23,21 @@ todosOsItens.forEach((item) => {
 });
 
 function handleMenuClick(event) {
-  // Impede que o link recarregue a página
   event.preventDefault();
 
-  // Remove a classe "ativo" de todos os itens para limpar o estado
   todosOsItens.forEach((item) => {
     item.classList.remove("ativo");
   });
 
-  // Adiciona a classe "ativo" apenas ao item que foi clicado
   const itemClicado = event.currentTarget;
   itemClicado.classList.add("ativo");
 
-  // Chama a outra função, passando o ID do item clicado para que ela decida o que mostrar
   renderizarTela(itemClicado.id);
 }
 
 function renderizarTela(idDaTela) {
-  let conteudoHTML = ""; // Variável que vai guardar o HTML a ser exibido
+  let conteudoHTML = ""; 
 
-  // Usamos um "switch" em vez de "if/else if". É muito mais limpo para múltiplos casos.
   switch (idDaTela) {
     case "dashboard":
       conteudoHTML = telaDashboardInicial.outerHTML;
@@ -96,7 +91,6 @@ function renderizarTela(idDaTela) {
       conteudoHTML = `<h2>Página não encontrada</h2>`; // Caso um ID não corresponda a nada
   }
 
-  // Finalmente, insere o HTML escolhido no container da tela
   telasContainer.innerHTML = conteudoHTML;
 }
 
