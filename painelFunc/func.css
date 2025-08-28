@@ -67,6 +67,24 @@ img {
 
 .painel-corpo {
     padding: 30px;
+
+    button {
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        margin-left: 27rem ;
+        margin-top: -1rem;
+        background-color: transparent;
+        border: none;
+        color: white;
+        display: flex;
+        gap: 3px;
+        transition: all 0.5s ease;
+    }
+
+    button:hover {
+        color: var(--batman-yellow);
+    }
 }
 
 .perfil {
@@ -74,7 +92,7 @@ img {
     align-items: center;
     gap: 25px;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Ajuda em telas muito pequenas */
+    flex-wrap: wrap; 
 }
 
 .foto-funcionario {
@@ -84,12 +102,12 @@ img {
     border: 4px solid var(--borda-sutil);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     object-fit: cover;
-    margin: 0 auto; /* Centraliza a foto se quebrar a linha */
+    margin: 0 auto; 
 }
 
 .identificacao {
     flex-grow: 1;
-    text-align: center; /* Centraliza o texto quando a linha quebra */
+    text-align: center; 
 }
 
 .nome-funcionario {
@@ -131,7 +149,7 @@ h3 {
     display: inline-flex;
     align-items: center;
     font-weight: bold;
-    /* Centraliza o container do nível de acesso */
+    
     display: block;
     width: fit-content;
     margin: 0 auto;
@@ -187,7 +205,7 @@ h3 {
     }
 }
 
-/* Ajustes para telas menores */
+
 @media (min-width: 500px) {
     .identificacao {
         text-align: left;

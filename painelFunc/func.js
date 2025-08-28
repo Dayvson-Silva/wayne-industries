@@ -1,7 +1,14 @@
 
-
-
-
 const nomeDoFuncionario = localStorage.getItem('nome');
 const nomeDisplay = document.querySelector('.nome-funcionario').innerHTML= `${nomeDoFuncionario}`
-const cargo =document.querySelector('.cargo-funcionario').innerHTML= `Cargo: ${cargo}`
+
+const btnSairPainel = document.querySelector('.btn-sair');
+
+
+
+
+btnSairPainel.addEventListener('click', () => {
+history.back();
+})
+
+
