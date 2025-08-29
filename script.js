@@ -61,7 +61,7 @@ btnGerente.addEventListener("click", () => {
 
     if (usuarioEncontrado) {
       localStorage.setItem("nome", usuarioEncontrado.nome);
-      window.location.href = "/painelGerente/painel.html";
+      window.location.href = "../painelGerente/painel.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
@@ -103,7 +103,7 @@ btnAdm.addEventListener("click", () => {
 
     if (usuarioEncontrado) {
       localStorage.setItem("nome", usuarioEncontrado.nome);
-      window.location.href = "/gestaoDeRecursos/gestao.html";
+      window.location.href = "../gestaoDeRecursos/gestao.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
@@ -144,7 +144,7 @@ btnFunc.addEventListener("click", () => {
     if (usuarioEncontrado) {
       alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
       localStorage.setItem("nome", usuarioEncontrado.nome);
-      window.location.href = "/painelFunc/func.html";
+      window.location.href = "../painelFunc/func.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
