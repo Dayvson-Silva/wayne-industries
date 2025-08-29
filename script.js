@@ -141,7 +141,7 @@ btnFunc.addEventListener("click", () => {
     if (usuarioEncontrado) {
       alert(`Bem-vindo, ${usuario.nome}!`);
       localStorage.setItem("usuario", JSON.stringify(usuario));
-      window.location.href = "/painelFunc/func.html";
+      window.location.href = "./painelFunc/func.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
