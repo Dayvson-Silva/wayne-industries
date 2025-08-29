@@ -9,7 +9,7 @@ const nomeUsuario = localStorage.getItem("nome");
 const gerente = (document.getElementById("gerente").innerHTML = `Gerente: ${nomeUsuario}`);
 
 btnSairPainel.addEventListener("click", () => {
-  history.back();
+  window.location.href = "../index.html";
 });
 
 const seguranca = document.getElementById("seguranca");

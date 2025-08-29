@@ -14,10 +14,10 @@ const listaDeUsuarios = [
   { nome: "Ryan Nalberth", senha: "4040", cargo: "Administrativo" },
 
   // Funcionários
-  { nome: "João Silva", senha: "5050", cargo: "Manobrista" },
-  { nome: "Ana Pereira", senha: "5050", cargo: "Operador" },
-  { nome: "Victor Brayner", senha: "5050", cargo: "Eletricista" },
-  { nome: "Thomas Gustavo", senha: "5050", cargo: "Ajudante" },
+  { Id: 1, nome: "João Silva", senha: "5050", cargo: "Manobrista" },
+  { Id: 2, nome: "Ana Pereira", senha: "5050", cargo: "Operadora" },
+  { Id: 3, nome: "Victor Brayner", senha: "5050", cargo: "Eletricista" },
+  { Id: 4, nome: "Thomas Gustavo", senha: "5050", cargo: "Ajudante" },
 ];
 
 function limparContainers() {
@@ -65,7 +65,6 @@ btnGerente.addEventListener("click", () => {
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
-
   });
 });
 
@@ -107,7 +106,6 @@ btnAdm.addEventListener("click", () => {
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
-
   });
 });
 btnFunc.addEventListener("click", () => {
@@ -132,19 +130,18 @@ btnFunc.addEventListener("click", () => {
     const nomeDigitado = nomeInput.value.trim();
     const senhaDigitada = senhaInput.value;
 
-    const usuarioEncontrado = listaDeUsuarios.find((usuario) => {
-      return (
-        usuario.nome.toLowerCase() === nomeDigitado.toLowerCase() &&
-        usuario.senha === senhaDigitada &&
-        usuario.cargo !== "Gerente" &&
-        usuario.cargo !== "Administrativo"
-      );
-    });
+    const usuarioEncontrado = listaDeUsuarios.findIndex(
+      (u) =>
+        u.nome.toLowerCase() === nomeDigitado.toLowerCase() &&
+        u.senha === senhaDigitada
+    );
+
+    const usuario = listaDeUsuarios[usuarioEncontrado];
 
     if (usuarioEncontrado) {
-      alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
-      localStorage.setItem("nome", usuarioEncontrado.nome);
-      window.location.href = "./painelFunc/func.html";
+      alert(`Bem-vindo, ${usuario.nome}!`);
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+      window.location.href = "/painelFunc/func.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
