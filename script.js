@@ -144,7 +144,7 @@ btnFunc.addEventListener("click", () => {
     if (usuarioEncontrado) {
       alert(`Bem-vindo, ${usuarioEncontrado.nome}!`);
       localStorage.setItem("nome", usuarioEncontrado.nome);
-      window.location.href = "wayne-industries/painelFunc/func.html";
+      window.location.href = "./painelFunc/func.html";
     } else {
       alert("Nome de usuário ou senha inválidos.");
     }
